@@ -1,0 +1,22 @@
+
+<div class="card mb-10" style="max-width: 1000px;" id="card">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img [src]="selectdata.image" [alt]="selectdata.name">
+    </div>
+    <div class="col-md-6" style="width: 600px;">        
+      <div class="card-body">
+          <div *ngIf="selectdata">
+              <h2>{{ selectdata.name }}</h2>
+              <p>data: {{ selectdata.status }}</p>
+              <p>Specses: {{ selectdata.species }}</p>
+              <p>Type: {{ selectdata.type }}</p>
+              <p>Gender: {{ selectdata.gender }}</p>
+              <p>Origin: {{ selectdata.origin.name}}</p>
+              <p>Location: {{ selectdata.location.name}}</p>
+           </div>
+           <button><a (click)="goBackToParent()" >Go Back</a></button>
+      </div>
+    </div>
+  </div>
+</div>

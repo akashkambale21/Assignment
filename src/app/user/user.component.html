@@ -1,0 +1,21 @@
+
+              <table >
+                  <thead>
+                      <tr>
+                          <th>
+                              Id
+                          </th>
+                          <th>
+                              Name
+                          </th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr *ngFor="let detas of deta">
+                          <td> <a [routerLink]="['/CharacterDetails', detas.id]">{{detas.id}}</a> </td>
+                          <td>{{detas.name}}</td>                     
+                      </tr>
+                  </tbody>
+              </table>
+         
+  
